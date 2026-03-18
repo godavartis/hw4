@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @user["username"] = params["username"]
     @user["email"] = params["email"]
     @user["password"] = params["password"]
+    @user["password_confirmation"] = params["password"]
     @user.save
-    redirect_to "/"
+    redirect_to "/sessions/new"
   end
 end
